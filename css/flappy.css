@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'Pixel';
+    src: url('../fonts/Pixel.ttf');
+}
+/** minha class principal, nela vai conter todo o estilo da pagina*/
+[wm-flappy]{
+    position: relative;
+    border: 5px solid rgb(0, 0, 0);
+    height: 700px;
+    width: 1200px;
+    margin: 15px;
+    background-image: url(../imgs/background_flappy1.png);
+    overflow: hidden; /** vai esconder todos os elementos que estiver fo*/
+
+}
+
+.passaro {
+    position: absolute;
+    width: 60px;
+    left: calc(50% - 30px); /** calculo para que o passaro fique no meio da pagina, conforme o layout */
+    
+}
+
+.par-de-barreiras{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+}
+
+.barreira{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.barreira .borda{
+    height: 30px;
+    width: 130px;
+    background: linear-gradient(90deg, #639301, #A5E82E) ;
+    border: 2px solid #000000;
+}
+
+.barreira .corpo{
+    height: 150px;
+    width: 110px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+}
+
+.progresso{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: Pixel;
+    font-size: 70px;
+    z-index: 100;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:black;
+}
